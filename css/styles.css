@@ -30,11 +30,18 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
+    opacity: 0.65;
 }
 
 .about {
     display: table;
+    vertical-align: right;
+    display: table-cell;
+    border-left: 6px solid black;
+    height: 200px;
+    left: 50%;
+    margin-left: 1000 px;
+    top: 0;
 }
 
 
@@ -51,4 +58,13 @@ span {
     vertical-align: middle;
     height: 50px;
     display: table-cell;
+}
+
+.con {
+    align-content: center;
+    text-align: center;
+}
+
+p. {
+    float: center;
 }
