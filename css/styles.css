@@ -61,10 +61,51 @@ span {
 }
 
 .con {
-    align-content: center;
-    text-align: center;
+    align-content: left;
+    text-align: left;
 }
 
 p. {
     float: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 50%;
+}
+
+.bar {
+    list-style: none;
+}
+
+.bar>li {
+    position: relative;
+}
+
+.bar>li:before {
+    content: '\25CF';
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.bar>li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    border-left: 2px solid black;
+    margin-left: 5px;
+    height: 100%;
+}
+
+.bar>li:first-of-type:after {
+    top: 50%;
+}
+
+.bar>li:last-of-type:after {
+    top: -50%;
 }
