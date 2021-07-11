@@ -32,3 +32,23 @@
     left: 0px;
     opacity: 0.75;
 }
+
+.about {
+    display: table;
+}
+
+
+/*
+img {
+    vertical-align: middle;
+    display: table-cell;
+    height: 350px;
+    width: 380px;
+}
+*/
+
+span {
+    vertical-align: middle;
+    height: 50px;
+    display: table-cell;
+}
