@@ -1,5 +1,5 @@
 .intro {
-    float: left;
+    float: center;
     font-weight: bold;
     font: white;
 }
@@ -8,4 +8,6 @@
     color: white;
 }
 
-.h3
+.about {
+    float: center;
+}
