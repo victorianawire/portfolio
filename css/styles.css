@@ -40,7 +40,7 @@
     border-left: 6px solid black;
     height: 200px;
     left: 40%;
-    margin-left: 1000 px;
+    margin-left: 800 px;
     top: 0;
     background-color: black;
     color: #548146;
@@ -153,7 +153,7 @@ body {
     /* this adds the "card" effect */
     padding: 16px;
     text-align: center;
-    background-color: #a5f58c;
+    background-color: #548146;
 }
 
 
