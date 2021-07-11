@@ -82,6 +82,7 @@ hr {
 
 .bar {
     list-style: none;
+    float: center;
 }
 
 .bar>li {
@@ -145,6 +146,14 @@ body {
     display: table;
     clear: both;
     color: black;
+}
+
+.edu {
+    float: center;
+}
+
+.bar {
+    float: center;
 }
 
 
