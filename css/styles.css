@@ -23,7 +23,7 @@
 
 .top::before {
     content: "";
-    background-image: url("https://victorianawire.github.io/portfolio/vic7.jpg");
+    background-image: url("../images/vic7.jpg");
 
     background-size: cover;
     position: absolute;
