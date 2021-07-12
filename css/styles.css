@@ -23,7 +23,7 @@
 
 .top::before {
     content: "";
-    background-image: url("../images.vic7.jpg");
+    background-image: url("../images/vic7.jpg");
     background-size: cover;
     position: absolute;
     top: 0px;
