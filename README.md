@@ -1,8 +1,5 @@
 # Portfolio
-
-Simple overview of use/purpose.
-
-## This is the landing page for my portfolio
+This is the landing page for my portfolio
 
 It will be used to view my skills and projects.
 
@@ -13,22 +10,14 @@ It will be used to view my skills and projects.
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 
 
-### Installing
+### Installing and executing program
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+* Download the zip file from github, extract the files and run the index file using a browser.
 
 ## Help
 
 Any advise for common problems or issues.
+To communicate with me :victorianawirev@gmail.com
 ```
 command to run if program contains helper info
 ```
