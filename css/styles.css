@@ -1,117 +1,135 @@
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    float: center;
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
 }
 
-.down {
-    transform: rotate(45deg);
-    -webkit-tranform: rotate(45deg);
-    float: centre;
+.menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #cea650;
+    transition: all 0.5s ease-out;
 }
 
-.top {
+.menu-btn.close {
+    transform: rotate(180deg);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 100vh;
+    opacity: 0.9;
+    visibility: hidden;
+}
+
+.menu.show {
+    visibility: visible;
+}
+
+.menu-branding,
+.menu-nav {
     display: flex;
+    flex-flow: column wrap;
     align-items: center;
-    float: center;
     justify-content: center;
-}
-
-.top::before {
-    content: "";
-    background-image: url("../images/vic7.jpg");
-
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.65;
-}
-
-.about {
-    display: table;
-    vertical-align: right;
-    display: table-cell;
-    border-left: 6px solid black;
-    height: 200px;
-    left: 40%;
-    margin-left: 800 px;
-    top: 0;
-    background-color: black;
-    color: #548146;
-}
-
-
-/*
-img {
-    vertical-align: middle;
-    display: table-cell;
-    height: 350px;
-    width: 380px;
-}
-*/
-
-span {
-    vertical-align: middle;
-    height: 50px;
-    display: table-cell;
-}
-
-.con {
-    align-content: left;
-    text-align: left;
-}
-
-.p {
-    float: center;
-}
-
-hr {
-    border: none;
-    border-top: 1px dashed #f00;
-    color: #fff;
-    background-color: #fff;
-    height: 1px;
+    float: left;
     width: 50%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.bar {
+.menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #cea650;
     list-style: none;
-    float: center;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out;
 }
 
-.bar>li {
+.menu-nav.show {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-branding {
+    background: #444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+}
+
+.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-branding .portrait {
+    width: 250px;
+    height: 250px;
+    background: url("/images/vic4.jpg");
+    border-radius: 50%;
+    border: solid 3px;
+    background: #cea650;
+}
+
+.menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out;
+}
+
+.menu .nav-item.show {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu .nav-item.current>a {
+    color: #252525;
+}
+
+.menu .nav-link {
+    display: inline-block;
     position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
 }
 
-.bar>li:before {
-    content: '\25CF';
-    margin-right: 10px;
-    font-size: 20px;
+.menu .nav-link:hover {
+    color: black;
 }
 
-.bar>li:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: '';
-    border-left: 2px solid black;
-    margin-left: 5px;
-    height: 100%;
+.nav-item:nth-child(1) {
+    transition-delay: 0.1s;
 }
 
-.bar>li:first-of-type:after {
-    top: 50%;
+.nav-item:nth-child(2) {
+    transition-delay: 0.2s;
 }
 
-.bar>li:last-of-type:after {
-    top: -50%;
+.nav-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+    transition-delay: 0.3s;
 }
 
 * {
@@ -119,11 +137,305 @@ hr {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background: #444;
+    color: black;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2.5;
+    background-color: white;
 }
 
+body#bg-img {
+    background: url("images/bg1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
 
-/* Float four columns side by side */
+body#bg-img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(68, 68, 68, 0.9);
+}
+
+h1,
+h2 {
+    margin: 0;
+    color: #cea650;
+    /*font-weight: 400;*/
+    font-weight: bolder;
+}
+
+h3 {
+    margin: 0;
+    /*font-weight: 400;*/
+    font-weight: bolder;
+}
+
+h1.lg-heading {
+    color: #cea650;
+    font-size: 6rem;
+}
+
+h2.lg-heading,
+h3.lg-heading {
+    font-size: 6rem;
+    color: #cea650;
+}
+
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5);
+}
+
+h4.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(29, 29, 29, 0.5);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: #cea650;
+}
+
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+}
+
+main .icons {
+    margin-top: 1rem;
+}
+
+main .icons a {
+    padding: 0.4rem;
+}
+
+main .icons a:hover {
+    color: #cea650;
+    transition: all 0.5s ease-out;
+}
+
+main#home {
+    overflow: hidden;
+}
+
+main#home h1 {
+    margin-top: 20vh;
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #cea650 3px solid;
+}
+
+.about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+
+.about-info .job-1 {
+    grid-area: job1;
+    text-align: justify;
+}
+
+.about-info .job-2 {
+    grid-area: job2;
+    text-align: justify;
+}
+
+.about-info .job-3 {
+    grid-area: job3;
+    text-align: justify;
+}
+
+.about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #cea650 5px solid;
+}
+
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projects img {
+    width: 100%;
+    border: 3px #fff solid;
+}
+
+.projects img:hover {
+    opacity: 0.5;
+    border-color: #cea650;
+    transition: all 0.5s ease-out;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out;
+}
+
+.boxes div:hover {
+    padding: 0.5rem 1.5rem;
+    background: #cea650;
+    color: #000;
+}
+
+.boxes div:hover span {
+    color: #000;
+}
+
+.btn,
+.btn-dark,
+.btn-light {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+}
+
+.btn:hover,
+.btn-dark:hover,
+.btn-light:hover {
+    background: #cea650;
+    color: #000;
+}
+
+.btn-dark {
+    background: black;
+    color: #fff;
+}
+
+.btn-light {
+    background: #c4c4c4;
+    color: #333;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2b2b2b;
+    color: #fff;
+    height: 60px;
+}
+
+@media screen and (min-width: 1171px) {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+    main .lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+    }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+        transform: translate3d(0, 0, 0);
+    }
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+    }
+    .menu-branding .portrait {
+        background: url("/images/vic4.jpg");
+        width: 200px;
+        height: 200px;
+        /*max-width: 100%;
+        max-height: 100%;*/
+    }
+    .about-info {
+        grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+        grid-template-columns: 1fr;
+    }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+home {
+    background-image: url("/images/bg1.jpg");
+    ;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        padding: 2rem;
+    }
+    main #home h1 {
+        margin-top: 10vh;
+    }
+    main .lg-heading {
+        margin-top: 1rem;
+        font-size: 5rem;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
 
 .column {
     float: left;
@@ -132,56 +444,6 @@ body {
     color: black;
 }
 
-
-/* Remove extra left and right margins, due to padding in columns */
-
-.row {
-    margin: 0 -5px;
-}
-
-
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    color: black;
-}
-
-.edu {
-    float: center;
-}
-
 .bar {
-    float: center;
-}
-
-
-/* Style the counter cards */
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /* this adds the "card" effect */
-    padding: 16px;
-    text-align: center;
-    background-color: #548146;
-    color: black;
-    font: black;
-}
-
-
-/* Responsive columns - one column layout (vertical) on small screens */
-
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-        color: black;
-    }
-}
-
-a. {
-    color: black;
+    text-align: justify;
 }
