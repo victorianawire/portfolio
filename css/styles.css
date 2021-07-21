@@ -270,12 +270,12 @@ main#home h1 {
 
 .about-info .job-2 {
     grid-area: job2;
-    text-align: justify;
+    text-align: center;
 }
 
 .about-info .job-3 {
     grid-area: job3;
-    text-align: justify;
+    text-align: center;
 }
 
 .about-info .job {
