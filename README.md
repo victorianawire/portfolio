@@ -1,34 +1,22 @@
 # Portfolio
 
-Simple overview of use/purpose.
-
-## This is the landing page for my portfolio
+This is the landing page for my portfolio
 
 It will be used to view my skills and projects.
 
-## Getting Started
-
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+One may use any browser to view the portfolio but chrome is the most preferred.
 
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+To download ,got to the repository and download the zipped file after which you may extract the files and run the index.html
 
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
 
 ## Help
 
-Any advise for common problems or issues.
+If you encounter any problem kindly get in touch with me at victoriananwirev@gmail.com
 ```
 command to run if program contains helper info
 ```
