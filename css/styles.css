@@ -450,7 +450,8 @@ home {
 }
 
 .v4 {
-    float:center;
-    width:30px;
-    height:30px;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
