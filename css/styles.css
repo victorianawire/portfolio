@@ -451,5 +451,6 @@ home {
 
 .v4 {
     float:center;
-    width:30%;
+    width:30px;
+    height:30px;
 }
