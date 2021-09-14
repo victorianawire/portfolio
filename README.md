@@ -57,6 +57,7 @@ Hi there, I'm <a href="https://kauer3.github.io/" target="_blank" rel="noreferre
 <h2> About Me <img src = "https://media0.giphy.com/media/KDDpcKigbfFpnejZs6/giphy.gif?cid=ecf05e47oy6f4zjs8g1qoiystc56cu7r9tb8a1fe76e05oty&rid=giphy.gif" width = 100px></h2>
 <img width="55%" align="right" alt="Github" src="https://raw.githubusercontent.com/onimur/.github/master/.resources/git-header.svg" />
 </h3>
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=slice&color=gradient&customColorList=10&height=16" width="395">
   <img src="https://capsule-render.vercel.app/api?type=slice&color=gradient&customColorList=10&height=16&reversal=true" width="395">
@@ -70,7 +71,7 @@ I'm a professional Software Developer 💻
   <img src="https://capsule-render.vercel.app/api?type=slice&color=gradient&customColorList=10&height=14&reversal=true" width="381">
 </p>
 <h3 align="center">
-React JS           ※            Node.js
+    React JS           ※            Node.js
 </h3>
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=slice&color=gradient&customColorList=10&height=12" width="340">
